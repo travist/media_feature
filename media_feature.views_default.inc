@@ -92,6 +92,11 @@ function media_feature_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'media';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Media';
+  $handler->display->display_options['menu']['description'] = 'The media for this site.';
+  $handler->display->display_options['menu']['weight'] = '10';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
   $export['media'] = $view;
 
   return $export;
