@@ -1,6 +1,8 @@
 core = "7.x"
 dependencies[] = "features"
 dependencies[] = "media"
+dependencies[] = "media_youtube"
+dependencies[] = "media_vimeo"
 dependencies[] = "mediafront"
 dependencies[] = "strongarm"
 dependencies[] = "styles"
