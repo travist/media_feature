@@ -32,5 +32,14 @@ function media_feature_install() {
     ))
     ->condition('delta', 'media-block_1')
     ->execute();
+
+  // Make this block only show up for media types.
+  node_form_block_admin_configure_submit(array(), array(
+    'values' => array(
+      'module' => 'views',
+      'delta' => 'media-block_1',
+      'type' => 'media'
+    )
+  ));
 }
 ?>
