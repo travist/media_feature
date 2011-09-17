@@ -22,5 +22,15 @@ function media_feature_install() {
     ))
     ->condition('delta', 'mediaplayer')
     ->execute();
+
+  // Now update the settings for the media playlist block.
+  db_update('block')
+    ->fields(array(
+      'status' => 1,
+      'weight' => -9,
+      'region' => 'sidebar_first'
+    ))
+    ->condition('delta', 'media-block_1')
+    ->execute();
 }
 ?>
