@@ -32,6 +32,7 @@ features[file_display][] = "image__media_small__file_field_styles_file_square_th
 features[file_display][] = "image__media_small__file_field_styles_file_thumbnail"
 features[file_display][] = "image__media_small__file_image"
 features[mediafront][] = "nodeplayer"
+features[mediafront][] = "player"
 features[mediafront][] = "views_player"
 features[node][] = "media"
 features[variable][] = "field_bundle_settings"

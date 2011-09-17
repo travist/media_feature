@@ -104,6 +104,16 @@ function media_feature_views_default_views() {
   $handler->display->display_options['menu']['description'] = 'The media for this site.';
   $handler->display->display_options['menu']['weight'] = '10';
   $handler->display->display_options['menu']['name'] = 'main-menu';
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'mediaplayer';
+  $handler->display->display_options['style_options']['mediafront_preset'] = 'player';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['path'] = 'player';
   $export['media'] = $view;
 
   return $export;
