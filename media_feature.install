@@ -1,0 +1,10 @@
+<?php
+/**
+ * Install the media feature module.
+ */
+function media_feature_install() {
+
+  // Since we exported this variable, we just need to delete it here.
+  db_query("DELETE FROM {variable} WHERE name='field_bundle_settings'");
+}
+?>
