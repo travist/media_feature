@@ -34,12 +34,14 @@ function media_feature_install() {
     ->execute();
 
   // Make this block only show up for media types.
-  node_form_block_admin_configure_submit(array(), array(
+  $form = array();
+  $form_state = array(
     'values' => array(
       'module' => 'views',
       'delta' => 'media-block_1',
-      'type' => 'media'
+      'types' => array('media')
     )
-  ));
+  );
+  node_form_block_admin_configure_submit($form, $form_state);
 }
 ?>
