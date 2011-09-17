@@ -65,8 +65,7 @@ function media_content_get_media() {
 }
 
 function media_content_add_file(&$node, $info, $id) {
-  $file = file_uri_to_object($info[$id]);
-  file_save($file);
+  $file = media_parse_to_file($info[$id]);
   $node->{$id}['und'][0] = array('fid' => $file->fid);
 }
 
