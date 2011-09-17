@@ -1,0 +1,6 @@
+core = "7.x"
+dependencies[] = "uuid"
+dependencies[] = "uuid_features"
+description = "Create sample media content for testing purposes"
+name = "media_content"
+package = "Features"
