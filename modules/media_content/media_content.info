@@ -1,6 +1,7 @@
 core = "7.x"
 dependencies[] = "uuid"
 dependencies[] = "uuid_features"
+dependencies[] = "uuid_services"
 dependencies[] = "services"
 dependencies[] = "entity"
 description = "Create sample media content for testing purposes"
