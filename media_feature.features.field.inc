@@ -48,7 +48,7 @@ function media_feature_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -76,39 +76,29 @@ function media_feature_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
 
-  // Exported field: 'node-media-field_image_upload'
-  $fields['node-media-field_image_upload'] = array(
+  // Exported field: 'node-media-field_image_asset'
+  $fields['node-media-field_image_asset'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_image_upload',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
+      'field_name' => 'field_image_asset',
+      'foreign keys' => array(),
       'indexes' => array(
         'fid' => array(
           0 => 'fid',
         ),
       ),
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '1',
-      'type' => 'image',
+      'module' => 'media',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'media',
     ),
     'field_instance' => array(
       'bundle' => 'media',
@@ -117,12 +107,11 @@ function media_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'image',
+          'module' => 'media',
           'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
+            'file_view_mode' => 'media_large',
           ),
-          'type' => 'image',
+          'type' => 'media',
           'weight' => '0',
         ),
         'teaser' => array(
@@ -133,27 +122,30 @@ function media_feature_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_image_upload',
-      'label' => 'Image Upload',
+      'field_name' => 'field_image_asset',
+      'label' => 'Image Asset',
       'required' => 0,
       'settings' => array(
-        'alt_field' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '',
-        'title_field' => 0,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'image',
+        'module' => 'media',
         'settings' => array(
-          'preview_image_style' => 'thumbnail',
+          'allowed_schemes' => array(
+            'public' => 'public',
+            'vimeo' => 0,
+            'youtube' => 0,
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'default' => 0,
+            'image' => 'image',
+            'video' => 0,
+          ),
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'image_image',
+        'type' => 'media_generic',
         'weight' => '2',
       ),
     ),
@@ -187,10 +179,10 @@ function media_feature_field_default_fields() {
           'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'file_view_mode' => 'media_link',
           ),
           'type' => 'media',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -218,84 +210,12 @@ function media_feature_field_default_fields() {
           'allowed_types' => array(
             'audio' => 'audio',
             'default' => 0,
-            'image' => 'image',
+            'image' => 0,
             'video' => 'video',
           ),
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '3',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-media-field_media_upload'
-  $fields['node-media-field_media_upload'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_media_upload',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'module' => 'file',
-      'settings' => array(
-        'display_default' => 0,
-        'display_field' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '1',
-      'type' => 'file',
-    ),
-    'field_instance' => array(
-      'bundle' => 'media',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
-          'weight' => '1',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_media_upload',
-      'label' => 'Media Upload',
-      'required' => 0,
-      'settings' => array(
-        'description_field' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'mp4 m4v mov flv f4v ogg ogv mp3 aac oga webm',
-        'max_filesize' => '',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'file',
-        'settings' => array(
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'file_generic',
         'weight' => '1',
       ),
     ),
@@ -304,9 +224,8 @@ function media_feature_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Image Upload');
+  t('Image Asset');
   t('Media Asset');
-  t('Media Upload');
 
   return $fields;
 }
