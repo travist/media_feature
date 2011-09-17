@@ -30,6 +30,7 @@ features[file_display][] = "image__media_small__file_field_styles_file_square_th
 features[file_display][] = "image__media_small__file_field_styles_file_thumbnail"
 features[file_display][] = "image__media_small__file_image"
 features[node][] = "media"
+features[variable][] = "field_bundle_settings"
 features[variable][] = "site_frontpage"
 features[views_view][] = "media"
 name = "media_feature"
