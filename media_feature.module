@@ -5,3 +5,42 @@
  */
 
 include_once('media_feature.features.inc');
+
+/**
+ * Implement of hook_menu().
+ */
+function media_feature_menu() {
+  // Used to import files from a local filesystem into Drupal.
+  $items['admin/content/media/import_files'] = array(
+    'title' => 'Import media',
+    'description' => 'Import files into your media library.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('media_feature_import'),
+    'access arguments' => array('import media'),
+    'type' => MENU_LOCAL_ACTION,
+  );
+  return $items;
+}
+
+function media_feature_import($form, &$form_state) {
+  $form['files'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Media Files'),
+    '#required' => TRUE,
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit')
+  );
+  return $form;
+}
+
+/**
+ * Submit handler for media_import().
+ */
+function media_feature_import_submit($form, &$form_state) {
+  $form_state['values']['op'] = 'Confirm';
+  $form_state['storage']['files'] = preg_split("/[\n\r]+/", $form_state['values']['files']);
+  module_load_include('inc', 'media', 'includes/media.admin');
+  media_import_submit($form, $form_state);
+}
