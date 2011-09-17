@@ -1,0 +1,98 @@
+<?php
+function media_content_get_media() {
+  return array(
+    array(
+      'title' => 'Drive',
+      'field_media' => 'http://trailers.apple.com/movies/independent/drive/drive-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BOTM1ODQ0Nzc4NF5BMl5BanBnXkFtZTcwMTM0MjQyNg@@._V1._SX640_SY1097_.jpg'
+    ),
+    array(
+      'title' => 'Ides of March',
+      'field_media' => 'http://trailers.apple.com/movies/sony_pictures/idesofmarch/idesofmarch-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BNTU4MjkzNTY0OF5BMl5BanBnXkFtZTcwNDI5ODIxNg@@._V1._SX509_SY755_.jpg'
+    ),
+    array(
+      'title' => 'The Three Musketeers',
+      'field_media' => 'http://trailers.apple.com/movies/summit/threemusketeers/threemusketeers-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTM3OTc2OTM2OF5BMl5BanBnXkFtZTcwMDM1MjU1NQ@@._V1._SX640_SY949_.jpg'
+    ),
+    array(
+      'title' => 'Apollo 18',
+      'field_media' => 'http://trailers.apple.com/movies/weinstein/apollo18/apollo18-tlr2_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTk5MTk3OTk3OV5BMl5BanBnXkFtZTcwMzg4MzgxNg@@._V1._SX640_SY948_.jpg'
+    ),
+    array(
+      'title' => 'Cowboys & Aliens',
+      'field_media' => 'http://trailers.apple.com/movies/universal/cowboysandaliens/cowboysandaliens-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTM1MzkyNzQ3OV5BMl5BanBnXkFtZTcwMDk1NTg2NQ@@._V1._SX640_SY948_.jpg'
+    ),
+    array(
+      'title' => 'Captain America',
+      'field_media' => 'http://trailers.apple.com/movies/paramount/captainamerica/captainamerica-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTYzOTc2NzU3N15BMl5BanBnXkFtZTcwNjY3MDE3NQ@@._V1._SX640_SY1000_.jpg'
+    ),
+    array(
+      'title' => 'Crazy Stupid Love',
+      'field_media' => 'http://trailers.apple.com/movies/wb/crazystupidlove/crazystupidlove-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTg2MjkwMTM0NF5BMl5BanBnXkFtZTcwMzc4NDg2NQ@@._V1._SX640_SY948_.jpg'
+    ),
+    array(
+      'title' => 'Harry Potter and the Deathly Hallows Part 2',
+      'field_media' => 'http://trailers.apple.com/movies/wb/harrypotterandthedeathlyhallowspart2/harrypotterhallows2-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTY2MTk3MDQ1N15BMl5BanBnXkFtZTcwMzI4NzA2NQ@@._V1._SX640_SY948_.jpg'
+    ),
+    array(
+      'title' => 'Sherlock Holmes',
+      'field_media' => 'http://trailers.apple.com/movies/wb/sherlockholmes2/sherlockholmes2-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BNTMxODQ3Mzg5NF5BMl5BanBnXkFtZTcwMTM4NzM5NQ@@._V1._SX464_SY755_.jpg'
+    ),
+    array(
+      'title' => 'John Carter',
+      'field_media' => 'http://trailers.apple.com/movies/disney/johncarter/johncarter-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTQ2MzQ1MTI1MV5BMl5BanBnXkFtZTcwNjk1OTI2NQ@@._V1._SX640_SY948_.jpg'
+    ),
+    array(
+      'title' => 'Contagion',
+      'field_media' => 'http://trailers.apple.com/movies/wb/contagion/contagion-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTY3MDk5MDc3OV5BMl5BanBnXkFtZTcwNzAyNTg0Ng@@._V1._SX640_SY946_.jpg'
+    ),
+    array(
+      'title' => 'The Change Up',
+      'field_media' => 'http://trailers.apple.com/movies/universal/thechangeup/changeup-tlr1_h480p.mov',
+      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTk3NTM4NDg3OF5BMl5BanBnXkFtZTcwNDk3MzEwNQ@@._V1._SX640_SY948_.jpg'
+    ),
+  );
+}
+
+function media_content_add_file(&$node, $info, $id) {
+  $file = media_parse_to_file($info[$id]);
+  $node->{$id}['und'][0] = array('fid' => $file->fid);
+}
+
+function media_content_create_node($info)
+{
+  $node = new stdClass();
+  $node->title = $info['title'];
+  $node->type = 'media';
+  $node->status = 1;
+  $node->promote = 1;
+  $node->sticky = 0;
+  $node->uid = 1;
+  $node->language = 'en';
+  $node->revision = 0;
+  media_content_add_file($node, $info, 'field_media');
+  media_content_add_file($node, $info, 'field_image_asset');
+  $node = node_submit($node);
+  node_save($node);
+  return $node;
+}
+
+/**
+ * Create all the media content.
+ */
+function media_content_install() {
+  foreach(media_content_get_media() as $info) {
+    media_content_create_node($info);
+  }
+}
+?>
