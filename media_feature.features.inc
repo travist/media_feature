@@ -384,6 +384,14 @@ function media_feature_mediafront_default_presets() {
  */
 function media_feature_node_info() {
   $items = array(
+    'html5_media' => array(
+      'name' => t('HTML5 Media'),
+      'base' => 'node_content',
+      'description' => t('This is a content type to utilize the HTML5 Media module for media display.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'media' => array(
       'name' => t('Media'),
       'base' => 'node_content',
