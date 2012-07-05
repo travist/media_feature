@@ -4,62 +4,62 @@ function media_content_get_media() {
     array(
       'title' => 'Drive',
       'field_media' => 'http://www.youtube.com/watch?v=j-yMY4O8SyY&feature=pyv',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BOTM1ODQ0Nzc4NF5BMl5BanBnXkFtZTcwMTM0MjQyNg@@._V1._SX640_SY1097_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BOTM1ODQ0Nzc4NF5BMl5BanBnXkFtZTcwMTM0MjQyNg@@._V1._SX640_SY1097_.jpg'
     ),
     array(
       'title' => 'Ides of March',
       'field_media' => 'http://www.youtube.com/watch?v=tmMhjc3Ah8E&feature=pyv',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BNTU4MjkzNTY0OF5BMl5BanBnXkFtZTcwNDI5ODIxNg@@._V1._SX509_SY755_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BNTU4MjkzNTY0OF5BMl5BanBnXkFtZTcwNDI5ODIxNg@@._V1._SX509_SY755_.jpg'
     ),
     array(
       'title' => 'The Three Musketeers',
       'field_media' => 'http://www.youtube.com/watch?v=mQd3MwT2fAM',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTM3OTc2OTM2OF5BMl5BanBnXkFtZTcwMDM1MjU1NQ@@._V1._SX640_SY949_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BMTM3OTc2OTM2OF5BMl5BanBnXkFtZTcwMDM1MjU1NQ@@._V1._SX640_SY949_.jpg'
     ),
     array(
       'title' => 'Apollo 18',
       'field_media' => 'http://www.youtube.com/watch?v=0F6DU6gx7-w',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTk5MTk3OTk3OV5BMl5BanBnXkFtZTcwMzg4MzgxNg@@._V1._SX640_SY948_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BMTk5MTk3OTk3OV5BMl5BanBnXkFtZTcwMzg4MzgxNg@@._V1._SX640_SY948_.jpg'
     ),
     array(
       'title' => 'Cowboys & Aliens',
       'field_media' => 'http://www.youtube.com/watch?v=zH7KZD5vGBY',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTM1MzkyNzQ3OV5BMl5BanBnXkFtZTcwMDk1NTg2NQ@@._V1._SX640_SY948_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BMTM1MzkyNzQ3OV5BMl5BanBnXkFtZTcwMDk1NTg2NQ@@._V1._SX640_SY948_.jpg'
     ),
     array(
       'title' => 'Captain America',
       'field_media' => 'http://www.youtube.com/watch?v=-J3HfllvXWE',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTYzOTc2NzU3N15BMl5BanBnXkFtZTcwNjY3MDE3NQ@@._V1._SX640_SY1000_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BMTYzOTc2NzU3N15BMl5BanBnXkFtZTcwNjY3MDE3NQ@@._V1._SX640_SY1000_.jpg'
     ),
     array(
       'title' => 'Crazy Stupid Love',
       'field_media' => 'http://www.youtube.com/watch?v=C60wZqUkk0A&feature=fvst',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTg2MjkwMTM0NF5BMl5BanBnXkFtZTcwMzc4NDg2NQ@@._V1._SX640_SY948_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BMTg2MjkwMTM0NF5BMl5BanBnXkFtZTcwMzc4NDg2NQ@@._V1._SX640_SY948_.jpg'
     ),
     array(
       'title' => 'Harry Potter and the Deathly Hallows Part 2',
       'field_media' => 'http://www.youtube.com/watch?v=5NYt1qirBWg',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTY2MTk3MDQ1N15BMl5BanBnXkFtZTcwMzI4NzA2NQ@@._V1._SX640_SY948_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BMTY2MTk3MDQ1N15BMl5BanBnXkFtZTcwMzI4NzA2NQ@@._V1._SX640_SY948_.jpg'
     ),
     array(
       'title' => 'Sherlock Holmes',
       'field_media' => 'http://www.youtube.com/watch?v=lNxhpNpnAkk',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BNTMxODQ3Mzg5NF5BMl5BanBnXkFtZTcwMTM4NzM5NQ@@._V1._SX464_SY755_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BNTMxODQ3Mzg5NF5BMl5BanBnXkFtZTcwMTM4NzM5NQ@@._V1._SX464_SY755_.jpg'
     ),
     array(
       'title' => 'John Carter',
       'field_media' => 'http://www.youtube.com/watch?v=6Rf55GTEZ_E',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTQ2MzQ1MTI1MV5BMl5BanBnXkFtZTcwNjk1OTI2NQ@@._V1._SX640_SY948_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BMTQ2MzQ1MTI1MV5BMl5BanBnXkFtZTcwNjk1OTI2NQ@@._V1._SX640_SY948_.jpg'
     ),
     array(
       'title' => 'Contagion',
       'field_media' => 'http://www.youtube.com/watch?v=4sYSyuuLk5g',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTY3MDk5MDc3OV5BMl5BanBnXkFtZTcwNzAyNTg0Ng@@._V1._SX640_SY946_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BMTY3MDk5MDc3OV5BMl5BanBnXkFtZTcwNzAyNTg0Ng@@._V1._SX640_SY946_.jpg'
     ),
     array(
       'title' => 'The Change Up',
       'field_media' => 'http://www.youtube.com/watch?v=xHnyW5Fvtvw',
-      'field_image_asset' => 'http://ia.media-imdb.com/images/M/MV5BMTk3NTM4NDg3OF5BMl5BanBnXkFtZTcwNDk3MzEwNQ@@._V1._SX640_SY948_.jpg'
+      'field_image' => 'http://ia.media-imdb.com/images/M/MV5BMTk3NTM4NDg3OF5BMl5BanBnXkFtZTcwNDk3MzEwNQ@@._V1._SX640_SY948_.jpg'
     ),
   );
 }
@@ -80,6 +80,7 @@ function media_content_create_node($info)
   $node->uid = 1;
   $node->language = 'en';
   $node->revision = 0;
+  $node->field_media_player['und'][0] = array('value' => 0);
   media_content_add_file($node, $info, 'field_media');
   media_content_add_file($node, $info, 'field_image');
   $node = node_submit($node);
