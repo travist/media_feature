@@ -190,7 +190,7 @@ function media_feature_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => FALSE,
+        'default_image' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -205,7 +205,7 @@ function media_feature_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -225,6 +225,13 @@ function media_feature_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
+        'mediafront' => array(
+          'custom' => '',
+          'field_type' => 'image',
+          'media_type' => 'media',
+          'preview' => 'large',
+          'thumbnail' => 'thumbnail',
+        ),
         'min_resolution' => '',
         'title_field' => 0,
         'user_register_form' => FALSE,
@@ -280,9 +287,12 @@ function media_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '1',
+          'module' => 'mediafront',
+          'settings' => array(
+            'preset' => 'nodeplayer',
+          ),
+          'type' => 'mediafront_player',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -300,6 +310,13 @@ function media_feature_field_default_fields() {
         'file_directory' => '',
         'file_extensions' => 'mp4 mov m4v flv f4v ogg ogv',
         'max_filesize' => '',
+        'mediafront' => array(
+          'custom' => '',
+          'field_type' => 'media',
+          'media_type' => 'media',
+          'preview' => '0',
+          'thumbnail' => '0',
+        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -325,70 +342,11 @@ function media_feature_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-media-field_media_player'.
-  $fields['node-media-field_media_player'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_media_player',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'mediafront',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'mediaplayer',
-    ),
-    'field_instance' => array(
-      'bundle' => 'media',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'mediafront',
-          'settings' => array(),
-          'type' => 'mediaplayer__nodeplayer',
-          'weight' => '0',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_media_player',
-      'label' => 'Media Player',
-      'required' => 0,
-      'settings' => array(
-        'show_player' => TRUE,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'mediafront',
-        'settings' => array(),
-        'type' => 'mediaplayer',
-        'weight' => '3',
-      ),
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Image');
   t('Image Asset');
   t('Media');
-  t('Media Player');
   t('Media Upload');
 
   return $fields;

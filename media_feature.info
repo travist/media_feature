@@ -26,7 +26,6 @@ features[field][] = node-html5_media-field_image_asset
 features[field][] = node-html5_media-field_media_upload
 features[field][] = node-media-field_image
 features[field][] = node-media-field_media
-features[field][] = node-media-field_media_player
 features[file_display][] = image__media_small__file_field_file_default
 features[file_display][] = image__media_small__file_field_file_table
 features[file_display][] = image__media_small__file_field_file_url_plain

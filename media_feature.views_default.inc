@@ -58,7 +58,7 @@ function media_feature_views_default_views() {
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'medium',
-    'image_link' => '',
+    'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_image']['field_api_classes'] = 0;
   /* Field: Content: Title */
@@ -84,6 +84,32 @@ function media_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Field: Content: Media */
+  $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
+  $handler->display->display_options['fields']['field_media']['field'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['label'] = '';
+  $handler->display->display_options['fields']['field_media']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_media']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_media']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_media']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_media']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_media']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_media']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_media']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_media']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_media']['field_api_classes'] = 0;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -107,6 +133,13 @@ function media_feature_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: MediaFront Player */
+  $handler->display->display_options['header']['mediafront_player']['id'] = 'mediafront_player';
+  $handler->display->display_options['header']['mediafront_player']['table'] = 'views';
+  $handler->display->display_options['header']['mediafront_player']['field'] = 'mediafront_player';
+  $handler->display->display_options['header']['mediafront_player']['empty'] = FALSE;
+  $handler->display->display_options['header']['mediafront_player']['mediafront_preset'] = 'views_player';
   $handler->display->display_options['path'] = 'media';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Media';
