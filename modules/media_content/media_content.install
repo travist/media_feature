@@ -81,7 +81,7 @@ function media_content_create_node($info)
   $node->language = 'en';
   $node->revision = 0;
   media_content_add_file($node, $info, 'field_media');
-  media_content_add_file($node, $info, 'field_image_asset');
+  media_content_add_file($node, $info, 'field_image');
   $node = node_submit($node);
   node_save($node);
   return $node;

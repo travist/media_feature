@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_views_default_views().
+ * Implements hook_views_default_views().
  */
 function media_feature_views_default_views() {
   $export = array();
@@ -17,7 +17,7 @@ function media_feature_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'media';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */

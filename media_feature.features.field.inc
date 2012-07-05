@@ -5,12 +5,12 @@
  */
 
 /**
- * Implementation of hook_field_default_fields().
+ * Implements hook_field_default_fields().
  */
 function media_feature_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-html5_media-field_image_asset'
+  // Exported field: 'node-html5_media-field_image_asset'.
   $fields['node-html5_media-field_image_asset'] = array(
     'field_config' => array(
       'active' => '1',
@@ -18,12 +18,20 @@ function media_feature_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_image_asset',
-      'foreign keys' => array(),
+      'foreign keys' => array(
+        'file_managed' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
       'indexes' => array(
         'fid' => array(
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'media',
       'settings' => array(),
       'translatable' => '0',
@@ -52,6 +60,7 @@ function media_feature_field_default_fields() {
       'label' => 'Image Asset',
       'required' => 0,
       'settings' => array(
+        'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov m4v mp4 mpeg avi ogg oga ogv wmv ico',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -77,7 +86,7 @@ function media_feature_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-html5_media-field_media_upload'
+  // Exported field: 'node-html5_media-field_media_upload'.
   $fields['node-html5_media-field_media_upload'] = array(
     'field_config' => array(
       'active' => '1',
@@ -98,6 +107,7 @@ function media_feature_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'file',
       'settings' => array(
         'display_default' => 0,
@@ -114,7 +124,7 @@ function media_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'html5_media',
+          'module' => 'file',
           'settings' => array(
             'autoplay' => FALSE,
             'height' => '350px',
@@ -123,7 +133,7 @@ function media_feature_field_default_fields() {
             'template' => 'default',
             'width' => '100%',
           ),
-          'type' => 'html5_video',
+          'type' => 'file_default',
           'weight' => '0',
         ),
         'teaser' => array(
@@ -156,24 +166,35 @@ function media_feature_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-media-field_image_asset'
-  $fields['node-media-field_image_asset'] = array(
+  // Exported field: 'node-media-field_image'.
+  $fields['node-media-field_image'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_image_asset',
-      'foreign keys' => array(),
+      'field_name' => 'field_image',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
       'indexes' => array(
         'fid' => array(
           0 => 'fid',
         ),
       ),
-      'module' => 'media',
-      'settings' => array(),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
       'translatable' => '0',
-      'type' => 'media',
+      'type' => 'image',
     ),
     'field_instance' => array(
       'bundle' => 'media',
@@ -181,7 +202,7 @@ function media_feature_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '2',
@@ -194,36 +215,34 @@ function media_feature_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_image_asset',
-      'label' => 'Image Asset',
+      'field_name' => 'field_image',
+      'label' => 'Image',
       'required' => 0,
       'settings' => array(
+        'alt_field' => 0,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 0,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'image',
         'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-            'vimeo' => 0,
-            'youtube' => 0,
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'default' => 0,
-            'image' => 'image',
-            'video' => 0,
-          ),
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'media_generic',
+        'type' => 'image_image',
         'weight' => '2',
       ),
     ),
   );
 
-  // Exported field: 'node-media-field_media'
+  // Exported field: 'node-media-field_media'.
   $fields['node-media-field_media'] = array(
     'field_config' => array(
       'active' => '1',
@@ -231,16 +250,28 @@ function media_feature_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_media',
-      'foreign keys' => array(),
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
       'indexes' => array(
         'fid' => array(
           0 => 'fid',
         ),
       ),
-      'module' => 'media',
-      'settings' => array(),
-      'translatable' => '1',
-      'type' => 'media',
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
     ),
     'field_instance' => array(
       'bundle' => 'media',
@@ -248,7 +279,7 @@ function media_feature_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '1',
@@ -262,9 +293,13 @@ function media_feature_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_media',
-      'label' => 'Media Asset',
+      'label' => 'Media',
       'required' => 0,
       'settings' => array(
+        'description_field' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'mp4 mov m4v flv f4v ogg ogv',
+        'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -290,7 +325,7 @@ function media_feature_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-media-field_media_player'
+  // Exported field: 'node-media-field_media_player'.
   $fields['node-media-field_media_player'] = array(
     'field_config' => array(
       'active' => '1',
@@ -304,6 +339,7 @@ function media_feature_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'mediafront',
       'settings' => array(),
       'translatable' => '0',
@@ -349,8 +385,9 @@ function media_feature_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Image');
   t('Image Asset');
-  t('Media Asset');
+  t('Media');
   t('Media Player');
   t('Media Upload');
 
