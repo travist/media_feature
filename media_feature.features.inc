@@ -219,6 +219,41 @@ function media_feature_mediafront_default_presets() {
 }
 
 /**
+ * Implements hook_mediafront_views_default_options().
+ */
+function media_feature_mediafront_views_default_options() {
+  $options = array(
+    'media' => array(
+      'field_image' => array(
+        'link_to_player' => 1,
+        'field_type' => 'image',
+        'media_type' => 'media',
+        'preview' => 'large',
+        'thumbnail' => 'thumbnail',
+        'custom' => '',
+      ),
+      'title' => array(
+        'link_to_player' => 1,
+        'field_type' => 'title',
+        'media_type' => 'media',
+        'preview' => '0',
+        'thumbnail' => '0',
+        'custom' => '',
+      ),
+      'field_media' => array(
+        'link_to_player' => 1,
+        'field_type' => 'media',
+        'media_type' => 'media',
+        'preview' => '0',
+        'thumbnail' => '0',
+        'custom' => '',
+      ),
+    ),
+  );
+  return $options;
+}
+
+/**
  * Implements hook_node_info().
  */
 function media_feature_node_info() {
